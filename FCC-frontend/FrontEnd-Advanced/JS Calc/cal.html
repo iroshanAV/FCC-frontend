@@ -1,60 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>JS Calc</title>
-    
-     
-     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
-     <link rel="stylesheet" href="cal.css">
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-     <script src="cal.js" ></script>
-     
-     
+  
+  <link rel="stylesheet" href="cal.css">
 </head>
-<body>
-    <link href="https://fonts.googleapis.com/css?family=Oswald|Prompt" rel="stylesheet">
-    <div class="text-center">
-      <h1 style="color:white;">Javascript Calculator</h1>
+
+  <h1> Javascript Calculator </h1>
+  <div id='calc'>
+    <form>
+      <input type='text' id='display' disabled>
       <br>
-    </div>
-    <div id ="output">
-      <span id= "steps">0</span>
-      <hr/>
-    </div>
-    <div class="text-center" id="calculator">
-      <a class="btn btn-danger" id="deleteAll">AC</a>
-      <a class="btn btn-danger" id="backOne">CE</a>
-      <a class="btn btn-primary" id="/">/</a>
-      <a class="btn btn-primary" id="*">*</a>
-        <br/>
-     <a class="btn btn-primary" id="7">7</a>
-    <a class="btn btn-primary" id="8">8</a>
-    <a class="btn btn-primary" id="9">9</a>
-    <a class="btn btn-primary" id="-">-</a>
-      <br/>
-      <a class="btn btn-primary" id="4">4</a>
-    <a class="btn btn-primary" id="5">5</a>
-    <a class="btn btn-primary" id="6">6</a>
-    <a class="btn btn-primary" id="+">+</a>
-      <br/>
-      <a class="btn btn-primary" id="1">1</a>
-    <a class="btn btn-primary" id="2">2</a>
-    <a class="btn btn-primary" id="3">3</a>
-    <a class="btn btn-primary" id=".">.</a>
-      <br/>
-      <a class ="btn btn-primary LButton" id="0">0</a>
-      <a class ="btn btn-primary LButton" id="total">=</a>
-    </div>
+      <input type='button' value='C' id='keys' onclick='addtoscreen("c")'>
+      <input type='button' value='CE' id='keys' onclick='backspace()'>
+      <input type='button' value='x^2' id='keys' onclick='power()'>
+      <input type='button' value='+' id='keys' onclick='addtoscreen("+")'>
+      <br>
+      <input type='button' value='9' id='keys' onclick='addtoscreen("9")'>
+      <input type='button' value='8' id='keys' onclick='addtoscreen("8")'>
+      <input type='button' value='7' id='keys' onclick='addtoscreen("7")'>
+      <input type='button' value='-' id='keys' onclick='addtoscreen("-")'>
+      <br>
+      <input type='button' value='6' id='keys' onclick='addtoscreen("6")'>
+      <input type='button' value='5' id='keys' onclick='addtoscreen("5")'>
+      <input type='button' value='4' id='keys' onclick='addtoscreen("4")'>
+      <input type='button' value='*' id='keys' onclick='addtoscreen("*")'>
+      <br>
+      <input type='button' value='3' id='keys' onclick='addtoscreen("3")'>
+      <input type='button' value='2' id='keys' onclick='addtoscreen("2")'>
+      <input type='button' value='1' id='keys' onclick='addtoscreen("1")'>
+      <input type='button' value='/' id='keys' onclick='addtoscreen("/")'>
+      <br>
+      <input type='button' value='0' id='keys' onclick='addtoscreen("0")'>
+      <input type='button' value='.' id='keys' onclick='addtoscreen(".")'>
+      <input type='button' value='=' id='equal' onclick='answer()'>
 
-
-    
-    
-</body>
+    </form>
+    <h3>JS Calculator</h3>
+  </div>
+  <script src="cal.js"></script>
 </html>
